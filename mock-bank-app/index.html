@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bank – Account Opening</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Digital Bank – Account Opening</h2>
+
+        <!-- Step 1: Landing -->
+        <div id="landing">
+            <button id="start-account">Start Account Opening</button>
+        </div>
+
+        <!-- Step 2: Personal Details -->
+        <div id="personal" class="hidden">
+            <input id="name" placeholder="Full Name">
+            <input id="dob" placeholder="DOB (YYYY-MM-DD)">
+            <input id="email" placeholder="Email">
+            <button id="continue-kyc">Continue to KYC</button>
+        </div>
+
+        <!-- Step 3: KYC -->
+        <div id="kyc" class="hidden">
+            <input id="aadhar" placeholder="Aadhar Number">
+            <input id="pan" placeholder="PAN Number">
+            <button id="continue-docs">Continue to Document Upload</button>
+        </div>
+
+        <!-- Step 4: Document Upload -->
+        <div id="docs" class="hidden">
+            <h3>Document Upload</h3>
+
+            <label for="idType">Identity Proof Type</label>
+            <select id="idType">
+                <option value="">Select</option>
+                <option value="pan">PAN</option>
+                <option value="aadhaar">Aadhaar</option>
+                <option value="passport">Passport</option>
+            </select>
+            <input type="file" id="idUpload">
+
+            <label for="addressType">Address Proof Type</label>
+            <select id="addressType">
+                <option value="">Select</option>
+                <option value="aadhaar">Aadhaar</option>
+                <option value="utility">Utility Bill</option>
+                <option value="bank">Bank Statement</option>
+            </select>
+            <input type="file" id="addressUpload">
+
+            <button id="submit">Submit Application</button>
+        </div>
+
+        <!-- Step 5: Success -->
+        <div id="success" class="hidden">
+            <h2>Account Successfully Created</h2>
+            <p>Thank you for completing your digital account opening process.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
